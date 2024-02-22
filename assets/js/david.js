@@ -22,3 +22,26 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
+
+    // JavaScript function to handle the download
+    document.getElementById('downloadCVBtn').onclick = function() {
+        // Specify the URL of the file to download
+        var fileUrl = 'David_Updated_Resume.pdf';
+        
+        // Create a temporary anchor element
+        var a = document.createElement('a');
+        a.href = fileUrl;
+
+        // Set the file name for the download
+        a.download = 'David_Mwape_Resume.pdf';
+
+        // Append the anchor element to the document body
+        document.body.appendChild(a);
+
+        // Trigger a click event to initiate the download
+        a.click();
+
+        // Remove the anchor element from the document body
+        document.body.removeChild(a);
+    };
+
